@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
 
     @org.testng.annotations.Test
     public void testRemain() {
