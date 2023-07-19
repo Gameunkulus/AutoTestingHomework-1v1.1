@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 public class CashbackHackServiceTest {
     @org.junit.Test
     public void remainTest() {
+
         CashbackHackService service = new CashbackHackService();
         //проверка при обычном числе
         int expected1 = 990;
@@ -15,7 +16,10 @@ public class CashbackHackServiceTest {
         Assert.assertEquals(expected2, service.remain(-10));
         //проверка при нулевом числе
         int expected3 = 1000;
-        Assert.assertEquals(expected3, service.remain(0));
+        Assertions.assertEquals(expected3, service.remain(0));
+        //проверка ввода сильно превышенного числа
+        int expected4 = 2000;
+        Assertions.assertEquals(expected3, service.remain(0));
     }
     @org.junit.jupiter.api.Test
     public void remainJupiterTest() {
