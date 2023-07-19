@@ -1,24 +1,25 @@
 package ru.netology.service;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
 
     @Test
     public void testRemain() {
         CashbackHackService service = new CashbackHackService();
         //проверка ввода обычного числа
         int expected1 = 990;
-        Assert.assertEquals(expected1, service.remain(10));
+        Assertions.assertEquals(expected1, service.remain(10));
         //проверка ввода отрицательного числа
         int expected2 = 1010;
-        Assert.assertEquals(expected2, service.remain(-10));
+        Assertions.assertEquals(expected2, service.remain(-10));
         //проверка ввода нулевого числа
         int expected3 = 1000;
-        Assert.assertEquals(expected3, service.remain(0));
+        Assertions.assertEquals(expected3, service.remain(0));
+        //проверка ввода сильно превышенного числа
+        int expected4 = 2000;
+        Assertions.assertEquals(expected3, service.remain(0));
     }
 
 }
