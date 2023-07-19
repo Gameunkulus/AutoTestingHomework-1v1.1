@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CashbackHackServiceTest {
 
-    @Test
+    @org.testng.annotations.Test
     public void testRemain() {
         CashbackHackService service = new CashbackHackService();
         //проверка ввода обычного числа
@@ -19,6 +19,7 @@ class CashbackHackServiceTest {
         //проверка ввода нулевого числа
         int expected3 = 1000;
         Assert.assertEquals(expected3, service.remain(0));
+
     }
 
 }
