@@ -15,6 +15,9 @@ public class CashbackHackServiceTest {
         //проверка при нулевом числе
         int expected3 = 1000;
         Assert.assertEquals(expected3, service.remain(0));
+        //проверка ввода сильно превышенного числа
+        int expected4 = 2000;
+        Assert.assertEquals(expected3, service.remain(0));
     }
 
 }
