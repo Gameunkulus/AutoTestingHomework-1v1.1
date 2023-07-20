@@ -15,6 +15,6 @@ jobs:
         java-version: 11
         distribution: 'adopt'
     - name: Grant execute permission for gradlew
-      run: chaod +x gradlew
+      run: chnod +x gradlew
     - name: Build with Gradle
       run: ./gradlew test --info
