@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CashbackHackServiceTest {
+class CashbackHackServiceTest {
 
     @org.testng.annotations.Test
     public void testRemain() {
@@ -21,5 +21,4 @@ public class CashbackHackServiceTest {
         Assert.assertEquals(expected3, service.remain(0));
 
     }
-
 }
