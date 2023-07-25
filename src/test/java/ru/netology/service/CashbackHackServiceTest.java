@@ -18,8 +18,8 @@ public class CashbackHackServiceTest {
         int expected3 = 1000;
         Assertions.assertEquals(expected3, service.remain(0));
         //проверка ввода сильно превышенного числа
-        int expected4 = 2000;
-        Assertions.assertEquals(expected3, service.remain(0));
+        int expected4 = -1000;
+        Assertions.assertEquals(expected4, service.remain(2000));
     }
 
 }
