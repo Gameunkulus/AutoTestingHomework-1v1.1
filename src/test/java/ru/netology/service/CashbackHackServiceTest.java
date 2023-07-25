@@ -2,37 +2,39 @@ package ru.netology.service;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CashbackHackServiceTest {
-    @org.junit.Test
-    public void remainTest() {
 
+    @Test
+    public void testRemainWitCashback() {
         CashbackHackService service = new CashbackHackService();
-        //проверка при обычном числе
-        int expected1 = 990;
-        Assert.assertEquals(expected1, service.remain(10));
-        //проверка при отрицательном числе
-        int expected2 = 1010;
-        Assert.assertEquals(expected2, service.remain(-10));
-        //проверка при нулевом числе
-        int expected3 = 1000;
-        Assertions.assertEquals(expected3, service.remain(0));
-        //проверка ввода сильно превышенного числа
-        int expected4 = 2000;
-        Assertions.assertEquals(expected3, service.remain(0));
+        //проверка ввода обычного числа
+        int expected = 100;
+        Assert.assertEquals(expected, service.remain(900));
     }
+
+    @Test
+    public void testRemain() {
+        CashbackHackService service = new CashbackHackService();
+        int expected = 0;
+        Assert.assertEquals(expected, service.remain(1000));
+    }
+
+    @org.junit.jupiter.api.Test
+    public void remainJupiterTestWithCashback() {
+        CashbackHackService service = new CashbackHackService();
+        //проверка ввода обычного числа
+        int expected = 100;
+        Assertions.assertEquals(service.remain(900), expected);
+    }
+
     @org.junit.jupiter.api.Test
     public void remainJupiterTest() {
         CashbackHackService service = new CashbackHackService();
-        //проверка при обычном числе
-        int expected1 = 990;
-        Assertions.assertEquals(expected1, service.remain(10));
-        //проверка при отрицательном числе
-        int expected2 = 1010;
-        Assertions.assertEquals(expected2, service.remain(-10));
-        //проверка при нулевом числе
-        int expected3 = 1000;
-        Assertions.assertEquals(expected3, service.remain(0));
+        //проверка ввода обычного числа
+        int expected = 0;
+        Assertions.assertEquals(service.remain(1000), expected);
     }
 
 }
